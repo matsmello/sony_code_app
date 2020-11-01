@@ -8,6 +8,7 @@ import MainScreen from "./pages/Main";
 import ArtistScreen from "./pages/Artist";
 import AwardsScreen from "./pages/Awards";
 import AwardScreen from "./pages/Award";
+import GoalScreen from "./pages/Goal";
 
 function HomeScreen({ navigation }) {
   return (
@@ -31,6 +32,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Goal" component={GoalScreen} />
         <Stack.Screen name="Award" component={AwardScreen} />
         <Stack.Screen name="Awards" component={AwardsScreen} />
         <Stack.Screen name="Perfil" component={PerfilScreen} />
