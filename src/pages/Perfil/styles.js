@@ -19,6 +19,10 @@ export const Avatar = styled.Image`
   margin-top: 20px;
 `;
 
+export const View = styled.View`
+  justify-content: center;
+`;
+
 export const MinimumContainer = styled.View`
   min-height: 140px;
   justify-content: space-evenly;

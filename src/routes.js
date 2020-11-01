@@ -29,9 +29,9 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Perfil" component={PerfilScreen} />
         <Stack.Screen name="Artist" component={ArtistScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
-        <Stack.Screen name="Perfil" component={PerfilScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="About" component={AboutScreen} />
       </Stack.Navigator>

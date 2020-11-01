@@ -58,3 +58,46 @@ export const musics = [
     image: require("./../images/resso.png"),
   },
 ];
+
+export const topArtists = [
+  {
+    title: "Anitta",
+    points: 12934,
+  },
+  {
+    title: "Zé Neto & Cristiano",
+    points: 3934,
+  },
+  {
+    title: "Marília Mendonça",
+    points: 5934,
+  },
+  {
+    title: "Dua Lipa",
+    points: 5934,
+  },
+  {
+    title: "Marron 5",
+    points: 5934,
+  },
+  {
+    title: "Duda Beat",
+    points: 5934,
+  },
+  {
+    title: "Ed sherran",
+    points: 5934,
+  },
+  {
+    title: "Post Malone",
+    points: 5934,
+  },
+  {
+    title: "Mando Reis",
+    points: 5934,
+  },
+  {
+    title: "Alok",
+    points: 5934,
+  },
+];

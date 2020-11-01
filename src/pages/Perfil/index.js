@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
 import * as S from "./styles";
 import { colors, typography } from "./../../settings/default";
+import { topArtists } from "../../mock";
 
 export default function index() {
   return (
     <S.Container>
-      <S.Scrollable>
+      <S.Scrollable showsVerticalScrollIndicator={false}>
         <S.Container>
           <S.Clickable>
             <S.Avatar source={require("./../../images/person.png")} />
@@ -57,11 +57,34 @@ export default function index() {
               </S.Card>
             </S.Row>
           </S.MinimumContainer>
-          <S.MinimumContainer style={{ justifyContent: "flex-start" }}>
+          <S.MinimumContainer
+            style={{ justifyContent: "flex-start", minHeight: 40 }}
+          >
             <S.SubTitle style={{ alignSelf: "flex-start" }}>
               Top 10 artistas preferidas
             </S.SubTitle>
           </S.MinimumContainer>
+          {topArtists.map(({ title, points }, index) => (
+            <S.Row style={{ justifyContent: "flex-start", marginVertical: 5 }}>
+              <S.Title>{index + 1} #</S.Title>
+              <S.View
+                style={{
+                  flexDirection: "row",
+                  flexGrow: 1,
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <S.Title>{title}</S.Title>
+                <S.View style={{ flexDirection: "row" }}>
+                  <S.SubTitle style={{ color: colors.orange, marginRight: 10 }}>
+                    {points}
+                  </S.SubTitle>
+                  <S.SubTitle>Pts</S.SubTitle>
+                </S.View>
+              </S.View>
+            </S.Row>
+          ))}
         </S.Container>
       </S.Scrollable>
     </S.Container>

@@ -46,6 +46,8 @@ export default function index() {
               alignSelf: "flex-start",
               marginTop: 20,
               marginLeft: 20,
+              justifyContent: "center",
+              marginVertical: 20,
             }}
           >
             Ranking
