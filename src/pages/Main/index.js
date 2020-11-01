@@ -31,7 +31,7 @@ export default function index() {
             <S.SubTitle>Mais Ouvidas na semana</S.SubTitle>
           </S.MinimumContainer>
           <S.MinimumContainer>
-            <S.RowList horizontal>
+            <S.RowList horizontal showsHorizontalScrollIndicator={false}>
               {artists.map(({ id, title, image }) => (
                 <S.Layer
                   key={id}
