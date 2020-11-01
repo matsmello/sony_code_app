@@ -11,6 +11,7 @@ export const Clickable = styled.TouchableOpacity``;
 
 export const Point = styled.Text`
   font-family: Sen;
+  font-family: Sen;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -29,6 +30,7 @@ export const Scrollable = styled.ScrollView`
 `;
 
 export const Title = styled.Text`
+  font-family: Sen;
   font-size: 20px;
   color: ${colors.white};
   font-weight: 700;
@@ -41,6 +43,7 @@ export const Title = styled.Text`
 `;
 
 export const SubTitle = styled.Text`
+  font-family: Sen;
   font-size: ${typography.h2};
   color: ${colors.white};
   font-size: 16px;
@@ -55,6 +58,7 @@ export const Row = styled.View`
 `;
 
 export const Description = styled.Text`
+  font-family: Sen;
   font-family: Sen;
   font-size: 10px;
   font-style: normal;
@@ -75,7 +79,6 @@ export const Card = styled.Image`
 `;
 
 export const Points = styled.View`
-  background-color: red;
   padding: 10px;
   z-index: -1;
   bottom: 10px;

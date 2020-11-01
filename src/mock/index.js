@@ -61,7 +61,7 @@ export const musics = [
 
 export const topArtists = [
   {
-    title: "Anitta",
+    title: "Anazinha",
     points: 12934,
   },
   {

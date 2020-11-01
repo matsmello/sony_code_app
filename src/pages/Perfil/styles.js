@@ -2,10 +2,8 @@ import styled from "styled-components/native";
 import { colors, typography } from "./../../settings/default";
 
 export const Container = styled.View`
-  background-color: ${colors.primary};
   flex: 1;
   align-items: center;
-  padding: 0px 10px;
 `;
 
 export const Clickable = styled.TouchableOpacity``;
@@ -32,12 +30,25 @@ export const MinimumContainer = styled.View`
 
 export const Scrollable = styled.ScrollView``;
 
+export const Description = styled.Text`
+  font-family: Sen;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: left;
+  color: white;
+`;
+
 export const Title = styled.Text`
+  font-family: Sen;
   font-size: ${typography.h1};
   color: ${colors.white};
 `;
 
 export const SubTitle = styled.Text`
+  font-family: Sen;
   font-size: ${typography.h2};
   color: ${colors.white};
 `;
@@ -55,4 +66,28 @@ export const Card = styled.TouchableOpacity`
   border-radius: 10px;
   justify-content: space-evenly;
   padding: 10px;
+`;
+
+export const UserTitle = styled.Text`
+  font-family: Sen;
+  font-family: Sen;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  color: white;
+`;
+
+export const Favorite = styled.Text`
+  font-family: Sen;
+  font-family: Sen;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  color: white;
 `;

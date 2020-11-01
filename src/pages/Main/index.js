@@ -27,7 +27,7 @@ export default function Main({ navigation }) {
             <S.Container style={{ padding: 10 }}>
               <S.MinimumContainer>
                 <S.Row>
-                  <S.Clickable>
+                  <S.Clickable onPress={() => navigation.navigate("Perfil")}>
                     <S.Avatar source={require("./../../images/person.png")} />
                   </S.Clickable>
                   <S.Container

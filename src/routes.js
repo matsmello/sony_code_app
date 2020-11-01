@@ -11,6 +11,8 @@ import AwardScreen from "./pages/Award";
 import GoalScreen from "./pages/Goal";
 import LoginScreen from "./pages/Login";
 
+import { useFonts } from "expo-font";
+
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -30,6 +32,9 @@ function AboutScreen() {
 const Stack = createStackNavigator();
 
 function App() {
+  const [loaded] = useFonts({
+    Sen: require("./../assets/fonts/Sen-Regular.ttf"),
+  });
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -37,11 +42,11 @@ function App() {
           headerShown: false,
         }}
       >
+        <Stack.Screen name="Awards" component={AwardsScreen} />
+        <Stack.Screen name="Perfil" component={PerfilScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Goal" component={GoalScreen} />
         <Stack.Screen name="Award" component={AwardScreen} />
-        <Stack.Screen name="Awards" component={AwardsScreen} />
-        <Stack.Screen name="Perfil" component={PerfilScreen} />
         <Stack.Screen name="Artist" component={ArtistScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
