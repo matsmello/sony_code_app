@@ -8,14 +8,37 @@ export const Container = styled.View`
 
 export const Clickable = styled.TouchableOpacity``;
 
+export const UserTitle = styled.Text`
+  font-family: Sen;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: white;
+  text-align: left;
+`;
+
+export const Points = styled.Text`
+  font-family: Sen;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-left: 10px;
+  color: white;
+`;
+
 export const TopChart = styled.Image`
   width: 100%;
   height: 240px;
 `;
 
 export const Avatar = styled.Image`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-width: 3px;
   border-radius: 700px;
   border-color: red;

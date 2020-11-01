@@ -29,21 +29,34 @@ export default function index() {
                   <S.Clickable>
                     <S.Avatar source={require("./../../images/person.png")} />
                   </S.Clickable>
-                  <S.Container style={{ padding: 10 }}>
-                    <S.Title style={{ alignSelf: "flex-start" }}>
-                      Bábara Pigle
-                    </S.Title>
+                  <S.Container
+                    style={{
+                      padding: 10,
+                      justifyContent: "center",
+                    }}
+                  >
+                    <S.Row style={{ justifyContent: "space-between" }}>
+                      <S.UserTitle style={{ alignSelf: "flex-start" }}>
+                        Bábara Pigle
+                      </S.UserTitle>
+                      <S.Icon source={require("./../../images/menu.png")} />
+                    </S.Row>
                     <S.Row
                       style={{
                         justifyContent: "flex-end",
                       }}
                     >
                       <S.Icon source={require("./../../images/fire.png")} />
-                      <S.SubTitle>250441 Pts</S.SubTitle>
+                      <S.Points>250441 Pts</S.Points>
                     </S.Row>
                   </S.Container>
                 </S.Row>
-                <S.SubTitle>Mais Ouvidas na semana</S.SubTitle>
+                <S.Row style={{ justifyContent: "space-between" }}>
+                  <S.UserTitle style={{ alignSelf: "flex-start" }}>
+                    Mais Ouvidas na semana
+                  </S.UserTitle>
+                  <S.Icon source={require("./../../images/search.png")} />
+                </S.Row>
               </S.MinimumContainer>
               <S.MinimumContainer>
                 <S.RowList horizontal showsHorizontalScrollIndicator={false}>

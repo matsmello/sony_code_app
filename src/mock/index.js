@@ -1,17 +1,17 @@
 export const artists = [
   {
     id: 0,
-    title: "Anitta",
+    title: "Caru",
     image: require("./../images/bg_anitta.png"),
   },
   {
     id: 1,
-    title: "Artic monkeys",
+    title: "Borim",
     image: require("./../images/bg_articmonkeys.png"),
   },
   {
     id: 2,
-    title: "Ludmilla",
+    title: "Miha Trend",
     image: require("./../images/bg_ludmilla.png"),
   },
 ];
