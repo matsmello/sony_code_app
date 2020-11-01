@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import PerfilScreen from "./pages/Perfil";
 import MainScreen from "./pages/Main";
 import ArtistScreen from "./pages/Artist";
+import AwardsScreen from "./pages/Awards";
 
 function HomeScreen({ navigation }) {
   return (
@@ -29,6 +30,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Awards" component={AwardsScreen} />
         <Stack.Screen name="Perfil" component={PerfilScreen} />
         <Stack.Screen name="Artist" component={ArtistScreen} />
         <Stack.Screen name="Main" component={MainScreen} />

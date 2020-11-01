@@ -101,3 +101,30 @@ export const topArtists = [
     points: 5934,
   },
 ];
+
+export const awards = [
+  {
+    id: 0,
+    image: require("./../images/product_1.png"),
+    title: "Camiseta Anitta Bang!",
+    description:
+      "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem.",
+    points: 15000,
+  },
+  {
+    id: 1,
+    image: require("./../images/product_2.png"),
+    title: "02 Entradas Show Anitta  01/05",
+    description:
+      "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem.",
+    points: 50000,
+  },
+  {
+    id: 2,
+    image: require("./../images/product_3.png"),
+    title: "Pack skol beats 150 bpm",
+    description:
+      "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem.",
+    points: 10000,
+  },
+];
