@@ -19,7 +19,7 @@ export const artists = [
 export const artist = [
   {
     id: 0,
-    title: "Anitta",
+    title: "Caru",
     image: require("./../images/anitta.png"),
   },
 ];
@@ -27,35 +27,35 @@ export const artist = [
 export const musics = [
   {
     id: 0,
-    title: "Anitta - Me Gusta",
-    subtitle: "Feat. Cardi B & Myke Towers",
-    genre: "Pop/Funk",
+    title: "Caru - Ao Mar",
+    subtitle: "Composição: Beto Márcio / Caru",
+    genre: "Pop/Mpb",
     position: 2,
     image: require("./../images/spotify.png"),
   },
   {
     id: 1,
-    title: "Anitta - Combatchy",
-    subtitle: "Feat. Lexa, Luisa Sonza feat MC Rebecca",
-    genre: "Pop/Funk",
+    title: "Caru - Além do mais ",
+    subtitle: "Composição: Beto Márcio / Caru",
+    genre: "Pop/Mpb",
     position: 5,
     image: require("./../images/spotify.png"),
   },
   {
     id: 2,
-    title: "Anitta - Me Gusta",
-    subtitle: "Feat. Cardi B & Myke Towers",
-    genre: "Pop/Funk",
+    title: "Caru - Ao Mar",
+    subtitle: "Composição: Beto Márcio / Caru",
+    genre: "Pop/Mpb",
     position: 8,
     image: require("./../images/deezer.png"),
   },
   {
     id: 3,
-    title: "Anitta - Tócame",
-    subtitle: "Feat. Cardi B & Myke Towers",
-    genre: "Pop/Funk",
+    title: "Caru - Luz",
+    subtitle: "Composição: Beto Márcio / Caru",
+    genre: "Pop/Mpb",
     position: 21,
-    image: require("./../images/resso.png"),
+    image: require("./../images/spotify.png"),
   },
 ];
 

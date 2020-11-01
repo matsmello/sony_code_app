@@ -2,10 +2,11 @@ import styled from "styled-components/native";
 import { colors, typography } from "./../../settings/default";
 
 export const Container = styled.View`
-  background-color: ${colors.primary};
   flex: 1;
   align-items: center;
 `;
+
+export const Icon = styled.Image``;
 
 export const ArtistBackground = styled.ImageBackground`
   width: 100%;

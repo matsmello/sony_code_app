@@ -4,13 +4,14 @@ import * as S from "./styles";
 import { colors, typography } from "./../../settings/default";
 import { artists } from "../../mock";
 import { LinearGradient } from "expo-linear-gradient";
+import { useEffect } from "react";
 
-export default function index() {
+export default function Main({ navigation }) {
   return (
     <S.Container>
       <LinearGradient
         // Background Linear Gradient
-        colors={["#640A0A", "#470D30"]}
+        colors={["#000000", "#470D30"]}
         style={{
           position: "absolute",
           left: 0,
@@ -68,9 +69,19 @@ export default function index() {
                       source={image}
                     >
                       <S.Card>
-                        <S.SubTitle style={{ marginTop: 100 }}>
-                          {title}
-                        </S.SubTitle>
+                        <S.Clickable
+                          style={{
+                            width: 132,
+                            height: 193,
+                            borderRadius: 10,
+                            padding: 10,
+                          }}
+                          onPress={() => navigation.navigate("Artist")}
+                        >
+                          <S.SubTitle style={{ marginTop: 100 }}>
+                            {title}
+                          </S.SubTitle>
+                        </S.Clickable>
                       </S.Card>
                     </S.Layer>
                   ))}
