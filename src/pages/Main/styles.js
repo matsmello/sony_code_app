@@ -2,12 +2,16 @@ import styled from "styled-components/native";
 import { colors, typography } from "./../../settings/default";
 
 export const Container = styled.View`
-  background-color: ${colors.primary};
   flex: 1;
   align-items: center;
 `;
 
 export const Clickable = styled.TouchableOpacity``;
+
+export const TopChart = styled.Image`
+  width: 100%;
+  height: 240px;
+`;
 
 export const Avatar = styled.Image`
   width: 100px;

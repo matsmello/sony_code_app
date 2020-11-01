@@ -11,7 +11,7 @@ import {
   ProgressChart,
   ContributionGraph,
 } from "expo-chart-kit";
-export default function Awards() {
+export default function Awards({ navigation }) {
   const screenWidth = Dimensions.get("window").width;
   const chartConfig = {
     backgroundColor: "transparent",
@@ -79,7 +79,7 @@ export default function Awards() {
           />
         </S.View>
         <S.View style={{ width: 200, alignSelf: "center" }}>
-          <S.Clickable>
+          <S.Clickable onPress={() => navigation.navigate("Main")}>
             <LinearGradient
               // Background Linear Gradient
               colors={["#FF0604", "#FF7A02"]}
