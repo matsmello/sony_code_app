@@ -4,8 +4,9 @@ import * as S from "./styles";
 import { colors, typography } from "./../../settings/default";
 import { musics } from "../../mock";
 import { LinearGradient } from "expo-linear-gradient";
+import { Header } from "./../../components";
 
-export default function index() {
+export default function index(props) {
   return (
     <S.Container>
       <LinearGradient
@@ -22,39 +23,34 @@ export default function index() {
         }}
       >
         <S.Scrollable showsVerticalScrollIndicator={false}>
+          <Header {...props} />
           <S.Container>
-            <S.Clickable
-              style={{
-                width: "100%",
-              }}
-            >
-              <S.View>
-                <S.ArtistBackground
+            <S.View style={{ width: "100%" }}>
+              <S.ArtistBackground
+                style={{
+                  maxHeight: 350,
+                }}
+                source={require("./../../images/anitta.png")}
+              >
+                <S.View
                   style={{
-                    maxHeight: 350,
+                    backgroundColor: "rgba(0,0,0,0.25)",
+                    height: "100%",
+                    justifyContent: "flex-end",
                   }}
-                  source={require("./../../images/anitta.png")}
                 >
-                  <S.View
+                  <S.Title
                     style={{
-                      backgroundColor: "rgba(0,0,0,0.25)",
-                      height: "100%",
-                      justifyContent: "flex-end",
+                      fontWeight: "600",
+                      margin: 10,
+                      fontSize: typography.h0,
                     }}
                   >
-                    <S.Title
-                      style={{
-                        fontWeight: "600",
-                        margin: 10,
-                        fontSize: typography.h0,
-                      }}
-                    >
-                      Caru
-                    </S.Title>
-                  </S.View>
-                </S.ArtistBackground>
-              </S.View>
-            </S.Clickable>
+                    Caru
+                  </S.Title>
+                </S.View>
+              </S.ArtistBackground>
+            </S.View>
             <S.Row
               style={{
                 justifyContent: "space-between",
