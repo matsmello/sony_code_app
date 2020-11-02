@@ -3,7 +3,7 @@ import { awards } from "../../mock";
 import * as S from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "../../settings/default";
-import { Dimensions } from "react-native";
+import { Dimensions, KeyboardAvoidingView, Platform } from "react-native";
 import {
   LineChart,
   BarChart,
@@ -46,69 +46,81 @@ export default function Awards({ navigation }) {
         width: "100%",
       }}
     >
-      <S.View
-        style={{
-          flex: 1,
-          marginHorizontal: 20,
-          paddingVertical: 50,
-        }}
+      <KeyboardAvoidingView
+        behavior={Platform.OS == "ios" ? "padding" : "height"}
+        style={{ flex: 1 }}
       >
-        <S.Title>WOW</S.Title>
-        <S.SubTitle>RANK</S.SubTitle>
-      </S.View>
-
-      <S.View
-        style={{
-          flex: 1,
-
-          paddingVertical: 50,
-          marginHorizontal: 20,
-          justifyContent: "space-evenly",
-        }}
-      >
-        <S.View>
-          <S.Input
-            placeholder="Digite seu e-mail"
-            placeholderTextColor="white"
-          />
+        <S.View
+          style={{
+            flex: 1,
+            marginHorizontal: 20,
+            paddingVertical: 50,
+          }}
+        >
+          <S.Title>WOW</S.Title>
+          <S.SubTitle>RANK</S.SubTitle>
         </S.View>
-        <S.View>
-          <S.Input
-            placeholder="Digite sua senha"
-            placeholderTextColor="white"
-          />
-        </S.View>
-        <S.View style={{ width: 200, alignSelf: "center" }}>
-          <S.Clickable onPress={() => navigation.navigate("Main")}>
-            <LinearGradient
-              // Background Linear Gradient
-              colors={["#FF0604", "#FF7A02"]}
-              style={{
-                position: "absolute",
-                left: 0,
-                right: 0,
-                top: 0,
-                height: "100%",
-                flex: 1,
-                width: "100%",
-                borderRadius: 10,
-              }}
+
+        <S.View
+          style={{
+            flex: 1,
+
+            paddingVertical: 50,
+            marginHorizontal: 20,
+            justifyContent: "space-evenly",
+          }}
+        >
+          <S.View>
+            <S.Input
+              placeholder="Digite seu e-mail"
+              autoCapitalize={false}
+              autoCompleteType={false}
+              autoCorrect={false}
+              placeholderTextColor="white"
             />
-            <S.Button>
-              <S.Title
+          </S.View>
+          <S.View>
+            <S.Input
+              placeholder="Digite sua senha"
+              placeholderTextColor="white"
+              autoCapitalize={false}
+              autoCompleteType={false}
+              autoCorrect={false}
+              secureTextEntry
+            />
+          </S.View>
+          <S.View style={{ width: 200, alignSelf: "center" }}>
+            <S.Clickable onPress={() => navigation.navigate("Main")}>
+              <LinearGradient
+                // Background Linear Gradient
+                colors={["#FF0604", "#FF7A02"]}
                 style={{
-                  fontSize: 16,
-                  alignItems: "center",
-                  textAlign: "center",
-                  alignSelf: "center",
+                  position: "absolute",
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  height: "100%",
+                  flex: 1,
+                  width: "100%",
+                  borderRadius: 10,
                 }}
-              >
-                Entrar
-              </S.Title>
-            </S.Button>
-          </S.Clickable>
+              />
+              <S.Button>
+                <S.Title
+                  style={{
+                    fontSize: 16,
+                    alignItems: "center",
+                    textAlign: "center",
+                    alignSelf: "center",
+                  }}
+                >
+                  Entrar
+                </S.Title>
+              </S.Button>
+            </S.Clickable>
+          </S.View>
         </S.View>
-      </S.View>
+      </KeyboardAvoidingView>
     </LinearGradient>
   );
 }

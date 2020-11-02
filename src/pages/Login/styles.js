@@ -108,4 +108,5 @@ export const Input = styled.TextInput`
   border-bottom-width: 1px;
   border-color: white;
   font-size: 20px;
+  color: white;
 `;
