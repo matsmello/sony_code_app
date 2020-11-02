@@ -72,6 +72,7 @@ export default function Awards(props) {
               <S.Row
                 style={{
                   maxWidth: Dimensions.get("window").width - 40,
+                  justifyContent: "space-between",
                 }}
               >
                 <S.Title
