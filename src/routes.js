@@ -1,4 +1,5 @@
 import * as React from "react";
+import { LogBox } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -15,6 +16,7 @@ import { useFonts } from "expo-font";
 
 const Stack = createStackNavigator();
 
+LogBox.ignoreAllLogs();
 function App() {
   const [loaded] = useFonts({
     Sen: require("./../assets/fonts/Sen-Regular.ttf"),

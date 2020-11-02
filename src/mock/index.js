@@ -106,7 +106,7 @@ export const awards = [
   {
     id: 0,
     image: require("./../images/product_1.png"),
-    title: "Camiseta Anitta Bang!",
+    title: "Camiseta Caru Fan!",
     description:
       "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem.",
     points: 15000,

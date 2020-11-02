@@ -23,8 +23,8 @@ export default function index(props) {
         }}
       >
         <SafeAreaView style={{ flex: 1 }}>
+          <Header {...props} />
           <S.Scrollable showsVerticalScrollIndicator={false}>
-            <Header {...props} />
             <S.Container>
               <S.Clickable>
                 <S.Avatar source={require("./../../images/person.png")} />

@@ -3,7 +3,7 @@ import { awards } from "../../mock";
 import * as S from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "../../settings/default";
-import { Dimensions } from "react-native";
+import { Dimensions, SafeAreaView } from "react-native";
 import {
   LineChart,
   BarChart,
@@ -11,7 +11,8 @@ import {
   ProgressChart,
   ContributionGraph,
 } from "expo-chart-kit";
-export default function Awards() {
+import { Header } from "../../components";
+export default function Awards(props) {
   const screenWidth = Dimensions.get("window").width;
   const chartConfig = {
     backgroundColor: "transparent",
@@ -46,57 +47,62 @@ export default function Awards() {
         width: "100%",
       }}
     >
-      <S.Scrollable style={{ flex: 1 }}>
-        <S.PercentageChart source={require("./../../images/chart.png")} />
-        <S.Icon
-          source={require("./../../images/info.png")}
-          style={{ marginLeft: 30 }}
-        ></S.Icon>
-        <S.View
-          style={{
-            flex: 1,
-            marginTop: 20,
-          }}
-        >
+      <SafeAreaView style={{ flex: 1 }}>
+        <Header {...props} />
+        <S.Scrollable style={{ flex: 1 }}>
+          <S.PercentageChart source={require("./../../images/chart.png")} />
+          <S.Icon
+            source={require("./../../images/info.png")}
+            style={{ marginLeft: 30 }}
+          ></S.Icon>
           <S.View
             style={{
-              flexDirection: "column",
-              justifyContent: "space-between",
-              marginVertical: 20,
-              paddingHorizontal: 30,
+              flex: 1,
+              marginTop: 20,
             }}
           >
-            <S.Row
+            <S.View
               style={{
-                maxWidth: Dimensions.get("window").width - 40,
+                flexDirection: "column",
+                justifyContent: "space-between",
+                marginVertical: 20,
+                paddingHorizontal: 30,
               }}
             >
-              <S.Title
-                numberOfLines={3}
+              <S.Row
                 style={{
                   maxWidth: Dimensions.get("window").width - 40,
                 }}
               >
-                {title}
-              </S.Title>
-              <S.View>
-                <S.Points
+                <S.Title
+                  numberOfLines={3}
                   style={{
-                    flexDirection: "row",
+                    maxWidth: Dimensions.get("window").width - 40,
                   }}
                 >
-                  <S.Fire source={require("./../../images/fire.png")}></S.Fire>
-                  <S.Point>{points}</S.Point>
-                </S.Points>
-              </S.View>
-            </S.Row>
-            <S.Description numberOfLines={3}>{description}</S.Description>
+                  {title}
+                </S.Title>
+                <S.View>
+                  <S.Points
+                    style={{
+                      flexDirection: "row",
+                    }}
+                  >
+                    <S.Fire
+                      source={require("./../../images/fire.png")}
+                    ></S.Fire>
+                    <S.Point>{points}</S.Point>
+                  </S.Points>
+                </S.View>
+              </S.Row>
+              <S.Description numberOfLines={3}>{description}</S.Description>
+            </S.View>
+            <S.PercentageChart
+              source={require("./../../images/chart_line.png")}
+            />
           </S.View>
-          <S.PercentageChart
-            source={require("./../../images/chart_line.png")}
-          />
-        </S.View>
-      </S.Scrollable>
+        </S.Scrollable>
+      </SafeAreaView>
     </LinearGradient>
   );
 }

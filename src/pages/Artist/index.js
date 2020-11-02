@@ -60,17 +60,21 @@ export default function index(props) {
             >
               <S.View>
                 <S.Row>
-                  <S.SubTitle
-                    style={{
-                      alignSelf: "flex-start",
-                      marginTop: 20,
-                      marginLeft: 20,
-                      justifyContent: "center",
-                      marginVertical: 20,
-                    }}
+                  <S.Clickable
+                    onPress={() => props.navigation.navigate("Awards")}
                   >
-                    Ranking
-                  </S.SubTitle>
+                    <S.SubTitle
+                      style={{
+                        alignSelf: "flex-start",
+                        marginTop: 20,
+                        marginLeft: 20,
+                        justifyContent: "center",
+                        marginVertical: 20,
+                      }}
+                    >
+                      Ranking
+                    </S.SubTitle>
+                  </S.Clickable>
 
                   <S.Icon
                     style={{ marginLeft: 10 }}

@@ -4,8 +4,9 @@ import * as S from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "../../settings/default";
 import { Dimensions } from "react-native";
+import { Header } from "../../components";
 
-export default function Awards() {
+export default function Awards(props) {
   const { id, title, image, description, points } = awards[0];
 
   return (
@@ -23,12 +24,16 @@ export default function Awards() {
       }}
     >
       <S.Scrollable style={{ flex: 1 }}>
+        <Header {...props} />
         <S.View
           style={{
             flex: 1,
           }}
         >
-          <S.Card source={image} resizeMode="contain" />
+          <S.Card
+            source={require("./../../images/camisa.png")}
+            resizeMode="contain"
+          />
           <S.View
             style={{
               flexDirection: "column",
@@ -39,7 +44,8 @@ export default function Awards() {
           >
             <S.Row
               style={{
-                maxWidth: Dimensions.get("window").width - 40,
+                maxWidth: Dimensions.get("window").width,
+                justifyContent: "space-between",
               }}
             >
               <S.Title
@@ -85,7 +91,7 @@ export default function Awards() {
             <S.Title style={{ alignSelf: "center" }}>Pegar agora</S.Title>
           </S.Button>
         </S.Clickable>
-        <S.Clickable>
+        <S.Clickable onPress={() => props.navigation.navigate("Goal")}>
           <S.Button>
             <S.Title style={{ alignSelf: "center" }}>Meu objetivo</S.Title>
           </S.Button>

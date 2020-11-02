@@ -4,8 +4,11 @@ import * as S from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { colors } from "../../settings/default";
 import { Dimensions, SafeAreaView } from "react-native";
+import { Header } from "../../components";
 
-export default function Awards({ navigation }) {
+export default function Awards(props) {
+  const { navigation } = props;
+
   return (
     <LinearGradient
       // Background Linear Gradient
@@ -21,7 +24,8 @@ export default function Awards({ navigation }) {
       }}
     >
       <SafeAreaView style={{ flex: 1 }}>
-        <S.Scrollable style={{ flex: 1 }}>
+        <Header {...props} />
+        <S.Scrollable style={{ flex: 1, marginTop: 30 }}>
           <S.View
             style={{
               flex: 1,
@@ -36,7 +40,7 @@ export default function Awards({ navigation }) {
                   alignContent: "space-between",
                 }}
               >
-                <S.View>
+                <S.Clickable onPress={() => navigation.navigate("Award")}>
                   <S.Card source={image} />
                   <S.Points
                     style={{
@@ -66,7 +70,7 @@ export default function Awards({ navigation }) {
                     ></S.Fire>
                     <S.Point>{points}</S.Point>
                   </S.Points>
-                </S.View>
+                </S.Clickable>
                 <S.View
                   style={{
                     flexDirection: "column",
