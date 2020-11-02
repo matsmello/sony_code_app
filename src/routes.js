@@ -17,6 +17,7 @@ import { useFonts } from "expo-font";
 const Stack = createStackNavigator();
 
 LogBox.ignoreAllLogs();
+
 function App() {
   const [loaded] = useFonts({
     Sen: require("./../assets/fonts/Sen-Regular.ttf"),
